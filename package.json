@@ -1,0 +1,20 @@
+{
+  "name": "socket-io-lab",
+  "version": "1.0.0",
+  "description": "Experiments with socket.io",
+  "main": "server.js",
+  "repository": "git@github.com:chankruze/socket-io-lab.git",
+  "author": "chankruze <chankruze@gmail.com>",
+  "license": "GPL-3.0",
+  "scripts": {
+    "start": "node server.js",
+    "serve": "nodemon server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
