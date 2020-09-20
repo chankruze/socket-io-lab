@@ -8,15 +8,19 @@ Copyright (c) Geekofia 2020 and beyond
 const express = require('express')
 const cors = require('cors')
 const os = require('os')
+const path = require('path')
 
 // create http server
 const app = express()
 // use CORS
 app.use(cors())
 
+// use static to render html
+app.use(express.static('public'))
+
 // GET endpoints
 app.get('/', (req, res) => {
-    res.send('<h1>Hello world</h1>')
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
 })
 
 // PORT
