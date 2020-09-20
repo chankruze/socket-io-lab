@@ -5,6 +5,26 @@ Created: Sun Sep 20 2020 12:20:52 GMT+0530 (India Standard Time)
 Copyright (c) Geekofia 2020 and beyond
 */
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /* form */
 .form {
   flex: 1;
@@ -12,10 +32,12 @@ Copyright (c) Geekofia 2020 and beyond
   flex-direction: row;
   justify-content: space-between;
   position: fixed;
-  padding: 0px 14px 20px 0px;
+  padding: 10px 30px 20px 30px;
   bottom: 0;
-  width: 74%;
+  left: 0;
+  width: 100%;
   background: #002b36;
+  border-top: 2px solid#1cd2ff;
 }
 
 /* send button */
@@ -25,23 +47,36 @@ Copyright (c) Geekofia 2020 and beyond
   margin-left: 0.5rem;
 }
 
-/* messages wrapper */
+/* messages ul */
 
 #messages {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  margin-bottom: 4.5rem;
-  border-bottom: 2px solid #1cd2ff;
+  margin-bottom: 4.7rem;
 }
 
 #messages li {
-  padding: 5px 0px 5px 5px;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  color: #fff;
+}
+
+#messages li b {
+  color: #82ff1c;
 }
 
 #messages li:nth-child(odd) {
   background: #003441;
 }
+
 #messages li:nth-child(even) {
   background: #013744;
+}
+
+li.own-msg {
+  padding-left: 3.8em !important;
+  color: #1cd2ff !important;
 }

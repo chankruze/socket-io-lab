@@ -29,4 +29,21 @@ const PORT = process.env.PORT || 5006
 const networkInterfaces = os.networkInterfaces()
 let SERV_URL = networkInterfaces.eth0[0].address
 
-app.listen(PORT, () => console.log(`Server on network: http://${SERV_URL}:${PORT}/`))
+const server = app.listen(PORT, () => console.log(`Server on network: http://${SERV_URL}:${PORT}/`))
+
+// socket IO
+const io = require('socket.io')(server)
+// socket connection event
+io.on('connection', (socket) => {
+    console.log(`a user connected`)
+
+    // chat message event
+    socket.on('chat_message', (payload) => {
+        io.emit('chat_message', payload)
+    })
+
+    // disconnect event
+    socket.on('disconnect', () => {
+        console.log('user disconnected')
+    })
+})

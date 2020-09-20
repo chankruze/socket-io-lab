@@ -29,12 +29,16 @@ Copyright (c) Geekofia 2020 and beyond
 
         <!-- chat input -->
         <form class="form">
-            <input type="text" class="form-control" id="inputMessage" placeholder="Type your message here...">
+            <input type="text" class="form-control" id="inputMessage" placeholder="Type your message here..." required>
             <button type="submit" class="btn btn-info btn-send">send</button>
         </form>
     </div>
 
     <!-- footer -->
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
